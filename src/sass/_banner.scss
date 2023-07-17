@@ -1,0 +1,37 @@
+.banner {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  .banner-left {
+    width: 35%;
+    h1 {
+      padding-bottom: 1.5rem;
+      font-size: $fs-900;
+      font-weight: $fw-black;
+      color: darkblue;
+      span > * {
+        color: $clr-yellow-600;
+        font-size: $fs-900;
+      }
+    }
+    p {
+      font-weight: $fw-regular;
+      font-size: $fs-400;
+      color: black;
+    }
+    .btn-banner-container {
+      margin-top: 2rem;
+      & > :first-child {
+        margin-right: 2rem;
+      }
+    }
+  }
+  .banner-right {
+    width: 55%;
+    img {
+      width: 100%;
+    }
+  }
+}

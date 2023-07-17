@@ -1,0 +1,48 @@
+.sidebar-menu {
+  display: none;
+  width: 400px;
+  height: calc(100vh - 4.7rem);
+  background-color: $clr-neutral;
+  position: fixed;
+  bottom: 0;
+  left: -400px;
+  z-index: 12;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s ease;
+  @include laptop {
+    display: block;
+  }
+  &.active {
+    left: 0;
+  }
+
+  ul {
+    margin: 0;
+    padding-left: 0;
+    width: 100%;
+    list-style: none;
+    font-size: $fs-600;
+    font-weight: $fw-bold;
+    color: $clr-blue-main;
+
+    li {
+      border-bottom: 1px solid $clr-yellow-600;
+      width: 80%;
+      padding-top: 1.1rem;
+      padding-bottom: 1.1rem;
+      .side-links {
+        margin-top: 2rem;
+        margin-left: 1rem;
+        text-decoration: none;
+        color: $clr-blue-main;
+        width: 100%;
+        &:hover {
+          color: darkblue;
+        }
+      }
+    }
+  }
+}
