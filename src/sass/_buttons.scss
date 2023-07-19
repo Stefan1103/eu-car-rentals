@@ -4,7 +4,6 @@
   border-radius: 0.15rem;
   padding: 0.2rem 0.6rem;
   text-align: center;
-  margin: 0.5rem;
   text-decoration: none;
 }
 .btn-primary {
@@ -25,21 +24,20 @@
   background-color: $clr-blue-main;
   border: 1px solid transparent;
 }
-.btn-secondary {
+.btn-booking {
   @extend %butn;
-  color: $clr-blue-main;
-  background-color: $clr-neutral;
+
   font-weight: $fw-bold;
   font-size: $fs-600;
-  padding: 1em;
-  border: 1px solid $clr-blue-main;
+
+  color: $clr-yellow-600;
+  border: 1px solid transparent;
+  background-color: $clr-blue-main;
   box-shadow: 0 1px 2px gray;
   -moz-box-shadow: 0 1px 2px gray;
   -webkit-box-shadow: 0 1px 2px gray;
   transition: all 350ms ease-in-out;
 }
-.btn-secondary:hover {
-  color: $clr-yellow-600;
-  border: 1px solid transparent;
-  background-color: $clr-blue-main;
+.btn-booking:hover {
+  background-color: darkblue;
 }

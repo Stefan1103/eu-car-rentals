@@ -1,0 +1,109 @@
+.rental-fleet {
+  width: 100%;
+  min-height: 40vh;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  .rental-fleet-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h1,
+    h2,
+    p {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    h1 {
+      font-size: $fs-900;
+      font-weight: $fw-black;
+    }
+    h2 {
+      font-size: $fs-500;
+      font-weight: $fw-bold;
+    }
+    p {
+      font-style: normal;
+      font-size: $fs-400;
+      font-weight: $fw-regular;
+    }
+  }
+  .header-rental-fleet {
+    margin-bottom: 4rem;
+  }
+  .main-rental-fleet {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 2rem;
+    .model-names {
+      min-width: 15.625rem;
+      .car-name {
+        width: 100%;
+        padding-left: 1rem;
+        padding: 0.7rem 2rem;
+        background-color: $clr-neutral;
+        margin-bottom: 0.2rem;
+        color: black;
+        cursor: pointer;
+        h2 {
+          margin-bottom: 0;
+        }
+        &:hover {
+          color: $clr-yellow-600;
+          background-color: $clr-blue-main;
+        }
+        &.active {
+          color: $clr-yellow-600;
+          background-color: $clr-blue-main;
+        }
+      }
+    }
+    .model-img {
+      max-width: 30rem;
+    }
+    .model-specs {
+      min-width: 15rem;
+      .table-specs {
+        border: 1px solid black;
+        display: grid;
+        grid-template-columns: 1fr;
+        .table-head {
+          width: 100%;
+          background-color: $clr-blue-main;
+          color: $clr-yellow-600;
+          text-align: center;
+          border-bottom: 1px solid black;
+          padding: 1rem 0;
+          h3 {
+            font-size: $fs-700;
+            font-weight: $fw-bold;
+          }
+        }
+        .table-main {
+          .table-row {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid black;
+            &:last-child {
+              border: none;
+            }
+            .col {
+              padding: 0.5rem;
+              width: 50%;
+              &:first-child {
+                border-right: 1px solid black;
+              }
+              &:nth-child(2) {
+                text-align: end;
+              }
+            }
+          }
+        }
+      }
+      button {
+        width: 100%;
+        margin: 1rem auto;
+      }
+    }
+  }
+}

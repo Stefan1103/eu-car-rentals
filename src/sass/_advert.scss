@@ -1,0 +1,49 @@
+.advertisment {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 40vh;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  h3 {
+    font-weight: $fw-bold;
+    font-size: $fs-500;
+  }
+  h2 {
+    font-weight: $fw-bold;
+    font-size: $fs-900;
+  }
+  .advertisment-wrapper {
+    width: 80%;
+    margin-top: 2.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    .advertisment-1,
+    .advertisment-2,
+    .advertisment-3 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .icon-holder > * {
+        color: $clr-blue-main;
+        font-size: $fs-900;
+      }
+      h3 {
+        font-weight: $fw-black;
+        font-style: normal;
+        margin-top: 2rem;
+        margin-bottom: 0.5rem;
+      }
+      p {
+        margin-top: 1rem;
+        width: 80%;
+        font-size: $fs-400;
+        font-weight: $fw-regular;
+        font-style: normal;
+        text-align: center;
+      }
+    }
+  }
+}
