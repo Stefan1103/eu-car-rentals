@@ -8,24 +8,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    h1,
     h2,
+    h3,
     p {
       text-align: center;
-      margin-bottom: 1rem;
-    }
-    h1 {
-      font-size: $fs-900;
-      font-weight: $fw-black;
-    }
-    h2 {
-      font-size: $fs-500;
-      font-weight: $fw-bold;
-    }
-    p {
-      font-style: normal;
-      font-size: $fs-400;
-      font-weight: $fw-regular;
     }
   }
   .header-rental-fleet {

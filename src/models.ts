@@ -19,3 +19,16 @@ export interface ILocations {
   id: number;
   name: string;
 }
+
+export interface IuserTestimonials {
+  id: number;
+  user: string;
+  comment: string;
+  picture: string;
+}
+
+export interface IFaq {
+  id: number;
+  question: string;
+  answer: string;
+}

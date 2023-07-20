@@ -4,6 +4,8 @@ import Banner from "../components/Header/Banner";
 import Booking from "../components/Booking/Booking";
 import Advert from "../components/Advert/Advert";
 import RentalFleet from "../components/RentalFleet/RentalFleet";
+import Testimonials from "../components/Testimonials/Testimonials";
+import Faq from "../components/Faq/Faq";
 
 const Home = () => {
   return (
@@ -13,6 +15,8 @@ const Home = () => {
       <Advert />
       <Booking />
       <RentalFleet />
+      <Testimonials />
+      <Faq />
     </>
   );
 };

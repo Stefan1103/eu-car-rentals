@@ -13,8 +13,8 @@ const RentalFleet = () => {
     <section className="rental-fleet">
       <div className="rental-fleet-wrapper">
         <div className="header-rental-fleet">
-          <h2>Vehicle Models</h2>
-          <h1>Our Rental fleet</h1>
+          <h3>Vehicle Models</h3>
+          <h2>Our Rental fleet</h2>
           <p>Choose from a varaity of amazing car models for your next trip!</p>
         </div>
         <div className="main-rental-fleet">
@@ -27,9 +27,9 @@ const RentalFleet = () => {
                   className={`car-name ${carModel === id ? "active" : ""}`}
                   onClick={() => handleClick(id)}
                 >
-                  <h2>
+                  <h3>
                     {brand} - {model}
-                  </h2>
+                  </h3>
                 </div>
               );
             })}

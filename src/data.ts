@@ -1,4 +1,10 @@
-import { ILocations, InavLinks, IvehicleModels } from "./models";
+import {
+  ILocations,
+  InavLinks,
+  IvehicleModels,
+  IuserTestimonials,
+  IFaq,
+} from "./models";
 
 export const navLinks: InavLinks[] = [
   {
@@ -140,5 +146,43 @@ export const locations: ILocations[] = [
   {
     id: 5,
     name: "Berlin",
+  },
+];
+
+export const userTestimonials: IuserTestimonials[] = [
+  {
+    id: 1,
+    user: "Bruce Wayne",
+    comment:
+      '"I rented the car from this website and my experiance was amazing starting wtih how easy it is to book a car from the website also the cars are in a very good condition well kept. Rent prices are amazing you can\'t get better then this ones!"',
+    picture: "images/icons8-batman-48.png",
+  },
+  {
+    id: 1,
+    user: "Jack Napier",
+    comment:
+      '"Highly recommend this rental service the car was very reliable made my trip safe and fun. The Website is amazing and easy to use."',
+    picture: "images/icons8-joker-movie-100.png",
+  },
+];
+
+export const faq: IFaq[] = [
+  {
+    id: 1,
+    question: "1. What is special about eu-car-rentals?",
+    answer:
+      "Our prices are unbeatable in the market, ensuring you get the most value for your money. We have large range of prices and car models that suit evryones taste and budget.",
+  },
+  {
+    id: 2,
+    question: "2. How do i book a car?",
+    answer:
+      "You can book a car through our website, specifically the book a ride section. If you have some technical problem or you have any other questions about the car modesl you can always go to our contact page and either send us a message or use the phone-number to speak with operator.",
+  },
+  {
+    id: 3,
+    question: "3. Is there a refund policy?",
+    answer:
+      "We are very confident in our car models. Thats why we certenly offer a refund policy for disatisfactory service, for example if you have any kind of problem with the car if it brakes down, our policy is to fully refund you and give you 50% discount on the next booking you do. All this can be arranged by contacting us via the contact page.",
   },
 ];

@@ -21,7 +21,17 @@ body {
   display: flex;
   flex-direction: column;
 }
+
+h2 {
+  font-size: $fs-900;
+  font-weight: $fw-black;
+}
+h3 {
+  font-size: $fs-500;
+  font-weight: $fw-bold;
+}
 p {
-  font-style: italic;
-  font-weight: 100;
+  font-style: normal;
+  font-size: $fs-400;
+  font-weight: $fw-regular;
 }
