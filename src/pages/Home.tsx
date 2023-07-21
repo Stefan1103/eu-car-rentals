@@ -6,6 +6,7 @@ import Advert from "../components/Advert/Advert";
 import RentalFleet from "../components/RentalFleet/RentalFleet";
 import Testimonials from "../components/Testimonials/Testimonials";
 import Faq from "../components/Faq/Faq";
+import Footer from "../components/Footer/Footer";
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
       <RentalFleet />
       <Testimonials />
       <Faq />
+      <Footer />
     </>
   );
 };
