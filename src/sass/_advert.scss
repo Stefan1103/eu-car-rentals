@@ -3,22 +3,36 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 40vh;
+  justify-content: center;
+  min-height: 60vh;
   margin-top: 2rem;
   margin-bottom: 2rem;
   h3 {
     font-weight: $fw-bold;
     font-size: $fs-500;
+    @include mobile {
+      font-size: $fs-400;
+    }
   }
   h2 {
     font-weight: $fw-bold;
     font-size: $fs-900;
+    @include laptop {
+      font-size: 2.8rem;
+      text-align: center;
+    }
+    @include mobile {
+      font-size: 2rem;
+    }
   }
   .advertisment-wrapper {
     width: 80%;
     margin-top: 2.5rem;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    @include laptop-sm {
+      grid-template-columns: 1fr;
+    }
     .advertisment-1,
     .advertisment-2,
     .advertisment-3 {
@@ -26,6 +40,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      margin-bottom: 2rem;
       .icon-holder > * {
         color: $clr-blue-main;
         font-size: $fs-900;
@@ -43,6 +58,12 @@
         font-weight: $fw-regular;
         font-style: normal;
         text-align: center;
+        @include laptop-sm {
+          width: 60%;
+        }
+        @include mobile {
+          width: 90%;
+        }
       }
     }
   }

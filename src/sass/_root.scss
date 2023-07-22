@@ -25,13 +25,32 @@ body {
 h2 {
   font-size: $fs-900;
   font-weight: $fw-black;
+  @include laptop {
+    font-size: $fs-600;
+  }
+  @include tablet {
+    font-size: $fs-500;
+  }
+  @include laptop {
+    font-size: 2.8rem;
+    text-align: center;
+  }
+  @include mobile {
+    font-size: 2rem;
+  }
 }
 h3 {
   font-size: $fs-500;
   font-weight: $fw-bold;
+  @include mobile {
+    font-size: $fs-400;
+  }
 }
 p {
   font-style: normal;
   font-size: $fs-400;
   font-weight: $fw-regular;
+  @include mobile {
+    font-size: 1rem;
+  }
 }

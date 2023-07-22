@@ -50,8 +50,8 @@ const RentalFleet = () => {
             {vehicles.map((vehicle) => {
               const {
                 AC,
-                Fuel,
-                Transmission,
+                fuel,
+                transmission,
                 brand,
                 doors,
                 id,
@@ -67,39 +67,52 @@ const RentalFleet = () => {
                         <h3>{price}$/rent per day</h3>
                       </div>
                       <div className="table-main">
-                        <div className="table-row">
-                          <div className="col">Brand</div>
-                          <div className="col">{brand}</div>
+                        <div className="col">
+                          <div className="title">
+                            <p>Brand</p>
+                          </div>
+                          <div className="title">
+                            <p>Model</p>
+                          </div>
+                          <div className="title">
+                            <p>Transmission</p>
+                          </div>
+                          <div className="title">
+                            <p>Doors</p>
+                          </div>
+                          <div className="title">
+                            <p>AC</p>
+                          </div>
+                          <div className="title">
+                            <p>Fuel</p>
+                          </div>
+                          <div className="title">
+                            <p>Year</p>
+                          </div>
                         </div>
-                        <div className="table-row">
+                        <div className="col">
                           {" "}
-                          <div className="col">Model</div>
-                          <div className="col">{model}</div>
-                        </div>
-                        <div className="table-row">
-                          {" "}
-                          <div className="col">Fuel</div>
-                          <div className="col">{Fuel}</div>
-                        </div>
-                        <div className="table-row">
-                          {" "}
-                          <div className="col">Doors</div>
-                          <div className="col">{doors}</div>
-                        </div>
-                        <div className="table-row">
-                          {" "}
-                          <div className="col">Year</div>
-                          <div className="col">{year}</div>
-                        </div>
-                        <div className="table-row">
-                          {" "}
-                          <div className="col">AC</div>
-                          <div className="col">{AC}</div>
-                        </div>
-                        <div className="table-row">
-                          {" "}
-                          <div className="col">Transmission</div>
-                          <div className="col">{Transmission}</div>
+                          <div className="spec">
+                            <p>{brand}</p>
+                          </div>
+                          <div className="spec">
+                            <p>{model}</p>
+                          </div>
+                          <div className="spec">
+                            <p>{transmission}</p>
+                          </div>
+                          <div className="spec">
+                            <p>{doors}</p>
+                          </div>
+                          <div className="spec">
+                            <p>{AC}</p>
+                          </div>
+                          <div className="spec">
+                            <p>{fuel}</p>
+                          </div>
+                          <div className="spec">
+                            <p>{year}</p>
+                          </div>
                         </div>
                       </div>
                     </div>

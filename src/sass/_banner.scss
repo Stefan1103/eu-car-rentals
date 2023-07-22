@@ -5,22 +5,53 @@
   display: flex;
   align-items: center;
   justify-content: end;
+  @include laptop-sm {
+    justify-content: center;
+    align-items: center;
+  }
   .banner-left {
     width: 35%;
+    @include laptop-sm {
+      width: 65%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      margin-bottom: 15%;
+    }
+    @include tablet {
+      width: 80%;
+    }
+    @include mobile {
+      width: 90%;
+    }
     h1 {
       padding-bottom: 1.5rem;
       font-size: $fs-900;
       font-weight: $fw-black;
       color: darkblue;
+      @include laptop {
+        font-size: 3rem;
+      }
+      @include mobile-xs {
+        font-size: 2rem;
+      }
       span > * {
         color: $clr-yellow-600;
         font-size: 2.8rem;
+        @include mobile-xs {
+          font-size: 1.8rem;
+        }
       }
     }
     h2 {
       padding-bottom: 1.5rem;
       font-size: $fs-700;
       font-weight: $fw-bold;
+      @include mobile-xs {
+        font-size: $fs-600;
+      }
       span {
         color: $clr-yellow-600;
         background-color: $clr-blue-main;
@@ -32,20 +63,37 @@
       font-size: $fs-400;
       font-weight: $fw-regular;
       font-style: normal;
+      @include mobile-xs {
+        font-size: 1rem;
+      }
     }
     .btn-banner-container {
       margin-top: 2rem;
-      & > :first-child {
-        margin-right: 2rem;
+      display: flex;
+      width: 100%;
+      @include tablet {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
       }
     }
     button {
+      margin: 0.3rem;
+      @include laptop-sm {
+        display: flex;
+        justify-content: center;
+        width: 90%;
+      }
       span > * {
         margin-bottom: -0.2rem;
       }
     }
   }
   .banner-right {
+    @include laptop-sm {
+      display: none;
+    }
     width: 55%;
     img {
       width: 100%;

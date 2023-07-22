@@ -19,8 +19,9 @@ $fs-900: 3.5rem;
 $nav-height: 4.7rem;
 
 ///////////// POSLE ZA RESPONSIVE CISTO KAKO E MIXIN////////////////
-$width-laptop: 1200px;
-$width-mobile-xs: 511px;
+$width-laptop: 1264px;
+$width-laptop-sm: 1080px;
+$width-mobile-xs: 411px;
 $width-mobile: 600px;
 $width-tablet: 860px; //za bannerot pomalku od 860 screen display none na slikata
 @mixin tablet {
@@ -41,6 +42,11 @@ $width-tablet: 860px; //za bannerot pomalku od 860 screen display none na slikat
 }
 @mixin laptop {
   @media (max-width: #{$width-laptop}) {
+    @content;
+  }
+}
+@mixin laptop-sm {
+  @media (max-width: #{$width-laptop-sm}) {
     @content;
   }
 }

@@ -10,8 +10,8 @@ export interface IvehicleModels {
   year: number;
   doors: number;
   AC: string;
-  Transmission: string;
-  Fuel: string;
+  transmission: string;
+  fuel: string;
   img: string;
   price: number;
 }

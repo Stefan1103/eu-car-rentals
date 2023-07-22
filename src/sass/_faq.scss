@@ -1,7 +1,8 @@
 .faq {
   width: 100%;
   margin: 2rem auto;
-  min-height: 40vh;
+  min-height: 60vh;
+  margin-top: 2rem;
   .faq-wrapper {
     width: 50%;
     display: flex;
@@ -9,6 +10,12 @@
     justify-content: space-around;
     align-items: center;
     margin: 1rem auto;
+    @include laptop {
+      width: 75%;
+    }
+    @include tablet {
+      width: 97%;
+    }
     .faq-header {
       display: flex;
       flex-direction: column;
@@ -30,6 +37,16 @@
       .faq-main-wrapper {
         display: flex;
         flex-direction: column;
+        @include mobile {
+          h4 {
+            font-size: $fs-500;
+          }
+        }
+        @include mobile-xs {
+          h4 {
+            font-size: $fs-400;
+          }
+        }
         .question {
           width: 100%;
           display: flex;

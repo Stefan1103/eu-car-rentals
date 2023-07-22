@@ -67,16 +67,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="footer-bottom">
-          <ul className="footer-links">
-            {navLinks.map((link) => {
-              const { id, title, url } = link;
-              return (
-                <Link className="footer-link" key={id} to={url}>
-                  {title}
-                </Link>
-              );
-            })}
-          </ul>
+          <p>&copy; EU-car-rentals</p>
         </div>
       </div>
     </section>

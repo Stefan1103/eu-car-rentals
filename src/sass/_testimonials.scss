@@ -9,6 +9,9 @@
     justify-content: space-around;
     align-items: center;
     margin: 1rem auto;
+    @include laptop-sm {
+      width: 98%;
+    }
     .testimonials-header {
       display: flex;
       flex-direction: column;
@@ -27,13 +30,25 @@
       display: flex;
       justify-content: space-around;
 
+      @include mobile {
+        flex-wrap: wrap;
+      }
+
       .testimonials-main-wrapper {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
+        margin-bottom: 1.5rem;
         max-width: 50%;
         min-height: 170px;
+        @include mobile {
+          max-width: 80%;
+          margin-right: 0;
+        }
+        @include mobile-xs {
+          max-width: 97%;
+        }
         padding: 2rem;
         box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
         margin-right: 0.5rem;
