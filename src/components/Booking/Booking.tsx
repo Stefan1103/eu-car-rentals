@@ -5,12 +5,15 @@ import DirectionsCarIcon from "@mui/icons-material/DirectionsCar";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 
-const Booking = () => {
+const Booking: React.FC = () => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+  };
   return (
-    <section className="booking">
+    <section className="booking" id="booking">
       <h3>reserve your ride now</h3>
       <h2>Easy vehicle booking</h2>
-      <form>
+      <form onSubmit={handleSubmit}>
         <div className="form-wrapper">
           <div className="row">
             <div className="input-wrapper">
@@ -21,11 +24,15 @@ const Booking = () => {
                 Car Model
               </label>
               <select
-                id="veihcle-brand"
+                id="vehicle-brand"
                 name="vehicle-brand"
                 title="ye"
                 placeholder="selectit"
+                defaultValue={0}
               >
+                <option disabled={true} value="0">
+                  choose a vehicle
+                </option>
                 {vehicles.map((vehicle) => {
                   const { id, brand, model } = vehicle;
                   return (
@@ -43,8 +50,8 @@ const Booking = () => {
                 </span>
                 Pick up
               </label>
-              <select id="pick-up" name="pick-up">
-                <option disabled={true} value="">
+              <select id="pick-up" name="pick-up" defaultValue={0}>
+                <option disabled={true} value="0">
                   choose a location for pick-up.
                 </option>
                 {locations.map((location) => {
@@ -64,9 +71,9 @@ const Booking = () => {
                 </span>
                 Drop off
               </label>
-              <select id="drop-off" name="drop-off">
-                <option disabled={true} value="">
-                  choose a location for pick-up.
+              <select id="drop-off" name="drop-off" defaultValue={0}>
+                <option disabled={true} value="0">
+                  choose a location for drop off.
                 </option>
                 {locations.map((location) => {
                   const { id, name } = location;

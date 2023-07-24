@@ -16,7 +16,15 @@ const Sidebar: React.FC<ISideProps> = ({ sideBarOpen, setSideBarOpen }) => {
           const { id, title, url } = navLink;
           return (
             <li key={id}>
-              {
+              {url.charAt(0) === "#" ? (
+                <a
+                  onClick={() => setSideBarOpen(!sideBarOpen)}
+                  className="side-links"
+                  href={url}
+                >
+                  {title}
+                </a>
+              ) : (
                 <Link
                   onClick={() => setSideBarOpen(!sideBarOpen)}
                   to={url}
@@ -24,7 +32,7 @@ const Sidebar: React.FC<ISideProps> = ({ sideBarOpen, setSideBarOpen }) => {
                 >
                   {title}
                 </Link>
-              }
+              )}
             </li>
           );
         })}

@@ -4,7 +4,7 @@ import { userTestimonials } from "../../data";
 
 const Testimonials = () => {
   return (
-    <section className="testimonials">
+    <section className="testimonials" id="testimonials">
       <div className="testimonials-wrapper">
         <div className="testimonials-header">
           <h3>Reviewed by people</h3>
@@ -19,27 +19,23 @@ const Testimonials = () => {
           {userTestimonials.map((userT) => {
             const { comment, id, picture, user } = userT;
             return (
-              <>
-                <div key={id} className="testimonials-main-wrapper">
-                  <div className="testimonials-main-top">
-                    {<p>{comment}</p>}
-                  </div>
-                  <div className="testimonials-main-bottom">
-                    <div className="testimonials-user-container">
+              <div key={id} className="testimonials-main-wrapper">
+                <div className="testimonials-main-top">{<p>{comment}</p>}</div>
+                <div className="testimonials-main-bottom">
+                  <div className="testimonials-user-container">
+                    {" "}
+                    <div className="icon-container">
                       {" "}
-                      <div className="icon-container">
-                        {" "}
-                        <img src={picture} alt="user icon"></img>
-                      </div>
-                      <h4>{user}</h4>
+                      <img src={picture} alt="user icon"></img>
                     </div>
-
-                    <span>
-                      <FormatQuoteIcon />
-                    </span>
+                    <h4>{user}</h4>
                   </div>
+
+                  <span>
+                    <FormatQuoteIcon />
+                  </span>
                 </div>
-              </>
+              </div>
             );
           })}
         </div>

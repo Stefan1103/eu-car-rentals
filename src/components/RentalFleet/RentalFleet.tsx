@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { vehicles } from "../../data";
 
-const RentalFleet = () => {
+const RentalFleet: React.FC = () => {
   const [carModel, setCarModel] = useState(1);
   const [clickedToggle, setClickedToggle] = useState(false);
 
@@ -10,7 +10,7 @@ const RentalFleet = () => {
     setClickedToggle(!clickedToggle);
   };
   return (
-    <section className="rental-fleet">
+    <section className="rental-fleet" id="rental-fleet">
       <div className="rental-fleet-wrapper">
         <div className="header-rental-fleet">
           <h3>Vehicle Models</h3>
@@ -39,6 +39,7 @@ const RentalFleet = () => {
               if (carModel === vehicle.id) {
                 return (
                   <img
+                    key={vehicle.id}
                     src={vehicle.img}
                     alt={`this is an image of ${vehicle.brand}- ${vehicle.model} that is for rent.`}
                   ></img>
@@ -62,7 +63,7 @@ const RentalFleet = () => {
               if (carModel === id) {
                 return (
                   <>
-                    <div className="table-specs">
+                    <div key={id} className="table-specs">
                       <div className="table-head">
                         <h3>{price}$/rent per day</h3>
                       </div>
@@ -116,9 +117,14 @@ const RentalFleet = () => {
                         </div>
                       </div>
                     </div>
-                    <button type="button" className="btn-booking">
+                    <a
+                      key={id}
+                      href="#booking"
+                      type="button"
+                      className="btn-booking"
+                    >
                       Reserve
-                    </button>
+                    </a>
                   </>
                 );
               } else {

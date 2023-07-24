@@ -22,7 +22,11 @@ const Navbar = () => {
           <ul className="nav-items">
             {navLinks.map((navLink) => {
               const { title, id, url } = navLink;
-              return (
+              return url.charAt(0) === "#" ? (
+                <a key={id} className="nav-item" href={url}>
+                  {title}
+                </a>
+              ) : (
                 <Link className="nav-item" key={id} to={url}>
                   {title}
                 </Link>

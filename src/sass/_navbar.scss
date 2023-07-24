@@ -5,6 +5,9 @@
   color: black;
   transition: all 1s ease;
   z-index: 3;
+  @include laptop {
+    position: fixed;
+  }
   .nav-wrapper {
     display: flex;
     min-height: inherit;

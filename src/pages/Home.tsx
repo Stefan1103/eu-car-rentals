@@ -1,4 +1,3 @@
-import React from "react";
 import Navbar from "../components/Header/Navbar";
 import Banner from "../components/Header/Banner";
 import Booking from "../components/Booking/Booking";

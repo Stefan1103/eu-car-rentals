@@ -78,7 +78,8 @@
         justify-content: space-between;
       }
     }
-    button {
+    button,
+    a {
       margin: 0.3rem;
       @include laptop-sm {
         display: flex;

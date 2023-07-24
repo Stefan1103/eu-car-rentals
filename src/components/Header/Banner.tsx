@@ -23,13 +23,13 @@ const Banner = () => {
           tastes.
         </p>
         <div className="btn-banner-container">
-          <button className="btn-primary">
+          <a href="#booking" className="btn-primary">
             Book a ride
             <span>
               {" "}
               <CheckCircleOutlineIcon />
             </span>
-          </button>
+          </a>
           <button className="btn-primary">
             Learn more
             <span>

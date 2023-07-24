@@ -15,22 +15,22 @@ export const navLinks: InavLinks[] = [
   {
     id: 2,
     title: "About us",
-    url: "/about",
+    url: "/",
   },
   {
     id: 3,
     title: "Vehicle Models",
-    url: "/vehicle-models",
+    url: "#rental-fleet",
   },
   {
     id: 4,
     title: "Testimonials",
-    url: "/testimonials",
+    url: "#testimonials",
   },
   {
     id: 5,
     title: "Our Team",
-    url: "/our-team",
+    url: "/",
   },
   {
     id: 6,
@@ -158,7 +158,7 @@ export const userTestimonials: IuserTestimonials[] = [
     picture: "images/icons8-batman-48.png",
   },
   {
-    id: 1,
+    id: 2,
     user: "Jack Napier",
     comment:
       '"Highly recommend this rental service the car was very reliable made my trip safe and fun. The Website is amazing and easy to use."',

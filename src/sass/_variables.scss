@@ -2,7 +2,7 @@ $clr-neutral: hsl(0, 0%, 100%);
 $clr-blue-main: hsla(214, 87%, 33%, 0.9);
 $clr-yellow-600: hsla(57, 93%, 66%, 0.9);
 
-// font weigts
+// font weights
 $fw-thin: 100;
 $fw-regular: 400;
 $fw-medium: 500;
@@ -18,12 +18,11 @@ $fs-900: 3.5rem;
 
 $nav-height: 4.7rem;
 
-///////////// POSLE ZA RESPONSIVE CISTO KAKO E MIXIN////////////////
 $width-laptop: 1264px;
 $width-laptop-sm: 1080px;
 $width-mobile-xs: 411px;
 $width-mobile: 600px;
-$width-tablet: 860px; //za bannerot pomalku od 860 screen display none na slikata
+$width-tablet: 860px;
 @mixin tablet {
   @media (max-width: #{$width-tablet}) {
     @content;

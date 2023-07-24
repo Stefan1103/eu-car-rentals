@@ -14,7 +14,7 @@ const Contact = () => {
           <div className="contact-top">
             <div className="c-left">
               <div className="c-left-wrapper">
-                <h2>We're here</h2>
+                <h1>We're here</h1>
                 <h4>Our door is alwayes open for a good cup of coffee</h4>
               </div>
             </div>
@@ -39,11 +39,22 @@ const Contact = () => {
               </div>
               <form>
                 <input
+                  id="e-mail"
                   type="text"
                   placeholder="Enter E-mail Address here"
+                  name="e-mail"
                 ></input>
-                <input type="text" placeholder="Enter Name here"></input>
-                <textarea placeholder="Message us !"></textarea>
+                <input
+                  id="name"
+                  type="text"
+                  placeholder="Enter Name here"
+                  name="name"
+                ></input>
+                <textarea
+                  id="message"
+                  placeholder="Message us !"
+                  name="message"
+                ></textarea>
               </form>
             </div>
           </div>
