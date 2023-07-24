@@ -1,4 +1,3 @@
-import React from "react";
 import GradeIcon from "@mui/icons-material/Grade";
 import bannerImg from "../../assets/img/banner_car.jpg";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";

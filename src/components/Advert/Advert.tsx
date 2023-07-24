@@ -1,4 +1,3 @@
-import React from "react";
 import SupportAgentIcon from "@mui/icons-material/SupportAgent";
 import ToysIcon from "@mui/icons-material/Toys";
 import NoCrashIcon from "@mui/icons-material/NoCrash";

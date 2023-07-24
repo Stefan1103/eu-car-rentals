@@ -1,4 +1,3 @@
-import React from "react";
 import { navLinks } from "../../data";
 import { Link } from "react-router-dom";
 import Sidebar from "./Sidebar";

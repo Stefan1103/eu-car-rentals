@@ -1,8 +1,5 @@
-import React from "react";
 import MailIcon from "@mui/icons-material/Mail";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
-import { navLinks } from "../../data";
-import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
