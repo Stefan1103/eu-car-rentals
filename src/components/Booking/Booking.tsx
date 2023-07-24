@@ -1,14 +1,26 @@
-import React from "react";
+import React, { SetStateAction } from "react";
 import { vehicles, locations } from "../../data";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 import DirectionsCarIcon from "@mui/icons-material/DirectionsCar";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 
-const Booking: React.FC = () => {
+interface IPropsBooking {
+  setSelectedVehicle: React.Dispatch<SetStateAction<number | undefined>>;
+  selectedVehicle: number | undefined;
+}
+
+const Booking: React.FC<IPropsBooking> = ({
+  selectedVehicle,
+  setSelectedVehicle,
+}) => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
   };
+  const handleSelect = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setSelectedVehicle(parseInt(e.target.value));
+  };
+
   return (
     <section className="booking" id="booking">
       <h3>reserve your ride now</h3>
@@ -28,7 +40,8 @@ const Booking: React.FC = () => {
                 name="vehicle-brand"
                 title="ye"
                 placeholder="selectit"
-                defaultValue={0}
+                onChange={handleSelect}
+                value={selectedVehicle ? selectedVehicle : 0}
               >
                 <option disabled={true} value="0">
                   choose a vehicle

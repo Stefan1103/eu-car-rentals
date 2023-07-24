@@ -6,15 +6,22 @@ import RentalFleet from "../components/RentalFleet/RentalFleet";
 import Testimonials from "../components/Testimonials/Testimonials";
 import Faq from "../components/Faq/Faq";
 import Footer from "../components/Footer/Footer";
+import { useState } from "react";
 
 const Home = () => {
+  const [selectedVehicle, setSelectedVehicle] = useState<number | undefined>(
+    undefined,
+  );
   return (
     <>
       <Navbar />
       <Banner />
       <Advert />
-      <Booking />
-      <RentalFleet />
+      <Booking
+        setSelectedVehicle={setSelectedVehicle}
+        selectedVehicle={selectedVehicle}
+      />
+      <RentalFleet setSelectedVehicle={setSelectedVehicle} />
       <Testimonials />
       <Faq />
       <Footer />

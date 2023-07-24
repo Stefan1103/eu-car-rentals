@@ -1,8 +1,6 @@
-import React from "react";
 import blueEnvelope from "../assets/img/blue-envelope.jpg";
 import Navbar from "../components/Header/Navbar";
 import Footer from "../components/Footer/Footer";
-import MailIcon from "@mui/icons-material/Mail";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 
 const Contact = () => {

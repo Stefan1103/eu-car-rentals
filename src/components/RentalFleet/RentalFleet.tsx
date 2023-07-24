@@ -1,7 +1,11 @@
-import React, { useState } from "react";
+import React, { SetStateAction, useState } from "react";
 import { vehicles } from "../../data";
 
-const RentalFleet: React.FC = () => {
+interface IPropsRentalFleet {
+  setSelectedVehicle: React.Dispatch<SetStateAction<number | undefined>>;
+}
+
+const RentalFleet: React.FC<IPropsRentalFleet> = ({ setSelectedVehicle }) => {
   const [carModel, setCarModel] = useState(1);
   const [clickedToggle, setClickedToggle] = useState(false);
 
@@ -62,8 +66,8 @@ const RentalFleet: React.FC = () => {
               } = vehicle;
               if (carModel === id) {
                 return (
-                  <>
-                    <div key={id} className="table-specs">
+                  <div key={id}>
+                    <div className="table-specs">
                       <div className="table-head">
                         <h3>{price}$/rent per day</h3>
                       </div>
@@ -118,14 +122,14 @@ const RentalFleet: React.FC = () => {
                       </div>
                     </div>
                     <a
-                      key={id}
+                      onClick={() => setSelectedVehicle(id)}
                       href="#booking"
                       type="button"
                       className="btn-booking"
                     >
                       Reserve
                     </a>
-                  </>
+                  </div>
                 );
               } else {
                 return;
